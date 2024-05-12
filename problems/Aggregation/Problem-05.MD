@@ -4,20 +4,6 @@
 
 Group users by their favorite movie and retrieve the average age in each movie group.
 
-## Solution
-
-```agg
-db.challenges.aggregate([
-  // pipeline 1 --> group user by favorite movie
-  // and return their average age in each group
-  {
-    $group: {
-      _id: "$favorites.movie",
-      average: { $avg: "$age" },
-    },
-  },
-]);
-```
 
 ## Result
 

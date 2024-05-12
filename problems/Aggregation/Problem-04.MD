@@ -4,20 +4,6 @@
 
 Update the zipcode of the user with the email `"johndoe@example.com"` to `"10002"`.
 
-## Solution
-
-```agg
-db.challenges.aggregate([
-  // pipeline 1 --> find user by emaal
-  {
-    $match: { email: "johndoe@example.com" },
-  },
-  // pipeline 2 --> update the zipcode
-  {
-    $set: { "address.zipcode": "10002" },
-  },
-]);
-```
 
 ## Result
 

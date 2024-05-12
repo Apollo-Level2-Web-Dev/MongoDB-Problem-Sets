@@ -4,12 +4,7 @@
 
 Find the user(s) with the highest age.
 
-## Solution
 
-```agg
-db.challenges.find().sort({age:-1}).limit(1) // for Highest age
-db.challenges.find().sort({age:+1}).limit(1) // for Lowest age
-```
 
 ## Result
 

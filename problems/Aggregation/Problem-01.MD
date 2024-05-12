@@ -4,20 +4,6 @@
 
 Find all users with `"pizza"` as their favorite food and sort them according to age.
 
-## Solution
-
-```agg
-db.challenges.aggregate([
-  // pipeline 1 --> find people who loves pizza
-  {
-    $match: { "favorites.food": "pizza" },
-  },
-  // pipeline 2 --> sort them by age
-  {
-    $sort: { age: 1 },
-  },
-]);
-```
 
 ## Result
 

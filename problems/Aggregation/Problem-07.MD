@@ -4,23 +4,7 @@
 
 Perform a lookup aggregation to retrieve the orders data along with the customer details for each order.
 
-## Solution
 
-```agg
-db.orders.aggregate([
-  {
-    $lookup: {
-      from: "customers",
-      localField: "customer_id",
-      foreignField: "_id",
-      as: "inventory",
-    },
-  },
-  {
-    $project: { order_number: true, inventory: true },
-  },
-]);
-```
 
 ## Result
 

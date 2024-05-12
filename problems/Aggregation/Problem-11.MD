@@ -4,16 +4,6 @@
 
 Find the user(s) with the longest name.
 
-## Solution
-
-```agg
-db.challenges.aggregate([{
-  $addFields: {
-    "nameLength": { $strLenCP: "$name" }
-  }},
-{ "$sort": { "nameLength": -1 } },
-{$limit:1}
-])
 
 ```
 

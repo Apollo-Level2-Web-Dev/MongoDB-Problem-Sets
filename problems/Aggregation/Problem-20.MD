@@ -4,51 +4,6 @@
 
 Write a query to calculate the total value that a person has paid by each category.
 
-## Solution
-
-```agg
-db.people.aggregate([
-  {
-    $unwind: "$payments"
-  },
-  {
-    $group: {
-      _id: {
-        _id: "$_id",
-        firstName: "$firstName",
-        lastName: "$lastName",
-        category: "$payments.category"
-      },
-      amount: {
-        $sum: "$payments.amount"
-      }
-    }
-  },
-  {
-    $group: {
-      _id: {
-        _id: "$_id._id",
-
-      },
-      firstName: {
-        $first: "$_id.firstName"
-      },
-      lastName: {
-        $first: "$_id.lastName"
-      },
-      totalPayments: {
-        $push: {
-          category: "$_id.category",
-          amount: "$amount",
-
-        }
-      }
-    }
-  },
-
-]).pretty()
-
-```
 
 ## Result
 

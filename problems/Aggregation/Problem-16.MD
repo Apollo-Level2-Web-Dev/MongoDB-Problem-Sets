@@ -6,14 +6,6 @@ How many people in each country have ever paid at a restaurant?
 
 ## Solution
 
-```agg
-db.people.aggregate([
- { $match: { "payments": { $elemMatch: { "name" : "restaurant" } } } },
- { $group: { _id: "$address.country", visits: { $sum: 1 } } },
- { $sort : { visits: -1 } }
-]).pretty()
-
-```
 
 ## Result
 

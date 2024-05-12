@@ -4,11 +4,6 @@
 
 Find all users who are located in `New York`.
 
-## Solution
-
-```agg
-db.challenges.find({ "address.city": "New York" });
-```
 
 ## Result
 

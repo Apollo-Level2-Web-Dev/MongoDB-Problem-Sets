@@ -4,11 +4,7 @@
 
 Find the user(s) with the email "<johndoe@example.com>" and retrieve their favorite movie.
 
-## Solution
 
-```agg
-db.challenges.find({ email: "johndoe@example.com" },{ "email": 1, "favorites.movie": 1 })
-```
 
 ## Result
 

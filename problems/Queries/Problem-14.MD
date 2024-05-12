@@ -12,20 +12,6 @@ At least one of the properties must be valued at more than `$2,000,000`, and non
 
 _Hint, assets are stored in the field "wealth.realEstates"_
 
-## Solution
-
-```agg
-db.people.find({$and: [
- {$or: [ {$and: [ {"sex" : "female"}, {"address.city": "Paris"}  ] },
-  {$and: [ {"sex" : "male"}, {"address.city": "Cracow"} ] } ] },
- {"wealth.realEstates": {$elemMatch: {"type": "flat"}}},
- {"wealth.realEstates": {$elemMatch: {"type": "house"}}},
- {"wealth.realEstates": {$elemMatch: {"type": "land"}}},
- {"wealth.realEstates": {$elemMatch: {"worth": {$gt: 2000000}}}},
- {"wealth.realEstates": {$not: {$elemMatch: {"worth": {$lt: 500000}}}}}
-]}).count()
-
-```
 
 ## Result
 

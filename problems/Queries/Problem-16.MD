@@ -4,12 +4,6 @@
 
 Finds all people with firstName = `'Thomas'` and returns only the following fields: `_id`, `firstName` and `lastName`.
 
-## Solution
-
-```agg
-db.people.find({"firstName": "Thomas"}, {"firstName": 1, "lastName": 1}).pretty()
-```
-
 ## Result
 
 ```result

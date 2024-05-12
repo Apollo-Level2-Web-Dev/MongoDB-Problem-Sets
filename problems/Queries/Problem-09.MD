@@ -8,11 +8,6 @@ All payments are stored in the payments array field, let's take a look at the st
 
 ## Solution
 
-```agg
-db.people.find({"payments" :
-    { $elemMatch: { "name" : "cinema", "amount" : 12.99 } } }).count()
-
-```
 
 ## Result
 

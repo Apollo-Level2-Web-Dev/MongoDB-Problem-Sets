@@ -6,11 +6,6 @@ Find everyone who has one or more transactions worth less than `$5`.
 
 The returned results only include the `firstName`, `lastName` and `payments` fields containing only the first word whose amount is less than 5$.
 
-## Solution
-
-```agg
-db.people.find({"payments": {$elemMatch: {"amount": {$lt: 5}}}}, {"firstName": 1, "lastName": 1, "payments.$": 1}).pretty()
-```
 
 ## Result
 
