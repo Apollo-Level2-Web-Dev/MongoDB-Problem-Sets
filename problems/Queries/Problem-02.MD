@@ -7,7 +7,7 @@ Find the user(s) with the email "<johndoe@example.com>" and retrieve their favor
 ## Solution
 
 ```agg
-db.challenges.find({ email: "johndoe@example.com" },{ "email": 1, "favorites.movie": 1 })
+db.users.find({ email: "johndoe@example.com" },{ "email": 1, "favorites.movie": 1 })
 ```
 
 ## Result

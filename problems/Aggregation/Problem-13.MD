@@ -7,7 +7,7 @@ Find the user(s) with the highest number of friends.
 ## Solution
 
 ```agg
-db.challenges.aggregate([
+db.users.aggregate([
     {$project: { "name": 1, "numFriend": { $size:"$friends" }}},
     { "$sort": { "numFriend": -1 } },
     {$limit:1}

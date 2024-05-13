@@ -7,7 +7,7 @@ Find all users with `"pizza"` as their favorite food and sort them according to 
 ## Solution
 
 ```agg
-db.challenges.aggregate([
+db.users.aggregate([
   // pipeline 1 --> find people who loves pizza
   {
     $match: { "favorites.food": "pizza" },

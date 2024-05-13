@@ -7,7 +7,7 @@ Calculate the total count of friends across all users.
 ## Solution
 
 ```agg
-db.challenges.aggregate([
+db.users.aggregate([
     {$project: { "name": 1, "numFriend": { $size:"$friends" }}},
     { "$sort": { "numFriend": -1 } }
 ])

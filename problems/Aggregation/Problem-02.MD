@@ -7,7 +7,7 @@ Find all users over `30` whose favorite color is `"green"`.
 ## Solution
 
 ```agg
-db.challenges.aggregate([
+db.users.aggregate([
   // pipeline 1 --> find people older than 30 and favourite color is green
   {
     $match: { age: { $gt: 30 }, "favorites.color": "green" },

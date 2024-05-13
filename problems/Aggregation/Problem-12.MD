@@ -7,7 +7,7 @@ Calculate each state's total number of users in the address field.
 ## Solution
 
 ```agg
-db.challenges.aggregate([
+db.users.aggregate([
   {$group: {"_id":"$address.state",totalUser: {$sum:1}}},
   {$sort:{"totalUser":1}}
 ]);

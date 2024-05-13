@@ -7,7 +7,7 @@ Calculate the average age of users with a favorite `"pizza"` food.
 ## Solution
 
 ```agg
-db.challenges.aggregate([
+db.users.aggregate([
   // pipeline 1 --> people who loves pizza
   {
     $match: { "favorites.food": "pizza" },

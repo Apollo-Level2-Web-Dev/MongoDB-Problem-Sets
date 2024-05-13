@@ -7,7 +7,7 @@ Group users by their favorite color and retrieve the count of users in each colo
 ## Solution
 
 ```agg
-db.challenges.aggregate([
+db.users.aggregate([
   {$group: {"_id":"$favorites.color", name: {$push:"$name"},totalUser: {$sum:1}}},
   {$sort:{"totalUser":-1}}
 ]);
